@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css'>
+
+<style>
+
+body {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #023;
+  color: White;
+  padding-top: 3rem;
+}
+
+@media screen and (min-width: 64em) {
+  body {
+    padding-top: 7rem;
+  }
+}
+a {
+  color: #199ad6;
+}
+
+h1, p {
+  margin: 2rem;
+}
+
+.menu-toggler, .menu-toggler:hover, .menu-toggler:focus {
+  background-color: transparent;
+  margin: 0;
+  outline: 0;
+}
+
+.color-toggler {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: inline-block;
+  padding: 0.5em 1.25em;
+  box-shadow: 0 0.25rem 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0a3b61;
+  box-shadow: 0 0.5rem 0 0 rgba(0, 0, 0, 0.2);
+}
+.site-header .menu > li,
+.site-header .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lf-site-header a {
+  color: #fff;
+  opacity: 0.75;
+}
+.lf-site-header a:hover {
+  opacity: 1;
+}
+
+.lf-events-logo {
+  max-height: 1rem;
+}
+
+.event-site-header .button-group {
+  margin: 0;
+}
+.event-site-header .button-group .button {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+.event-site-header .dropdown-pane {
+  border: 0;
+  background-color: #14679e;
+  padding: 0;
+  box-shadow: 0 0.25rem 0 0.25rem rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+.event-site-header .dropdown-pane a {
+  color: #fff;
+  padding: 1rem 1.5rem !important;
+}
+.event-site-header .dropdown-pane a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.event-site-header .fa-caret-down {
+  opacity: 0.75;
+}
+
+body.red {
+  background-color: #311;
+}
+body.red .site-header {
+  background-color: #411;
+}
+body.red .event-site-header button, body.red .event-site-header .button {
+  background-color: #822;
+}
+body.red .event-site-header button:hover, body.red .event-site-header .button:hover {
+  background-color: #711;
+}
+body.red .dropdown-pane {
+  background-color: #711;
+}
+
+body.green {
+  background-color: #020;
+}
+body.green .site-header {
+  background-color: #141;
+}
+body.green .event-site-header button, body.green .event-site-header .button {
+  background-color: #282;
+}
+body.green .event-site-header button:hover, body.green .event-site-header .button:hover {
+  background-color: #171;
+}
+body.green .dropdown-pane {
+  background-color: #171;
+}
+
+body.purple {
+  background-color: #212;
+}
+body.purple .site-header {
+  background-color: #414;
+}
+body.purple .event-site-header button, body.purple .event-site-header .button {
+  background-color: #626;
+}
+body.purple .event-site-header button:hover, body.purple .event-site-header .button:hover {
+  background-color: #525;
+}
+body.purple .dropdown-pane {
+  background-color: #525;
+}
+
+body.orange {
+  background-color: #410;
+}
+body.orange .site-header {
+  background-color: #720;
+}
+body.orange .event-site-header button, body.orange .event-site-header .button {
+  background-color: #930;
+}
+body.orange .event-site-header button:hover, body.orange .event-site-header .button:hover {
+  background-color: #820;
+}
+body.orange .dropdown-pane {
+  background-color: #820;
+}
+
+</style>
+
+</head>
+
+<body translate="no" >
+
+  <header class="site-header">
+
+  <div class="hide-for-large" style="margin:1rem;">
+    <button class="menu-toggler button float-right" style="font-size:1rem;" data-toggle="lf-site-header-social event-site-header"><i class="fas fa-bars"></i></button>
+    <img class="hide-for-large" style="max-height:3rem;" src="https://events.linuxfoundation.org/wp-content/uploads/2018/12/OSSNA_Logo_800x161-01.png" />
+  </div>
+
+  <div class="event-site-header show-for-large" id="event-site-header" data-toggler="show-for-large">
+    <div class="button-group expanded stacked-for-medium">
+      <a href="#" class="button" style="min-width:16rem;">
+        <img style="max-height:3rem;" src="https://events.linuxfoundation.org/wp-content/uploads/2018/12/OSSNA_Logo_800x161-01.png" />
+      </a>
+      <a class="button" href="#" data-toggle="example-dropdown-1">
+        Attend&nbsp;&nbsp;<i class="fas fa-caret-down"></i>
+      </a>
+      <div class="dropdown-pane" id="example-dropdown-1" data-dropdown data-hover="true" data-hover-pane="true">
+        <ul class="menu vertical">
+          <li><a href="#">Diversity and Inclusion</a></li>
+          <li><a href="#">Child Care</a></li>
+          <li><a href="#">Diversity Scholarships</a></li>
+          <li><a href="#">Convince Your Boss</a></li>
+          <li><a href="#">Code of Conduct</a></li>
+        </ul>
+      </div>
+      <a class="button" href="#">Sponsors</a>
+      <a class="button" href="#">Venue + Travel</a>
+      <a class="button" href="#" data-toggle="dropdown-2">
+        Program&nbsp;&nbsp;<i class="fas fa-caret-down"></i>
+      </a>
+      <div class="dropdown-pane" id="dropdown-2" data-dropdown data-hover="true" data-hover-pane="true">
+        <ul class="menu vertical">
+          <li><a href="#">Schedule</a></li>
+          <li><a href="#">Pre-Conference</a></li>
+          <li><a href="#">Co-Located Events</a></li>
+          <li><a href="#">Program Co-Chairs</a></li>
+          <li><a href="#">Training and Exams</a></li>
+        </ul>
+      </div>
+      <a class="button" href="#">Register</a>
+      <a class="button" href="#">Other LF Events</a>
+    </div>
+  </div>
+
+</header>
+
+<h1 class="text-center"><img src="https://events.linuxfoundation.org/wp-content/uploads/2018/08/OSSNA_stacked_Web_W-01.png" /></h1>
+
+<p class="lead"><strong class="color-toggler">Change theme color</strong></p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.3/js/foundation.min.js'></script>
+
+
+
+    <script id="rendered-js" >
+      $(document).foundation();
+
+$(document).ready(function() {
+
+  $('body').addClass('blue');
+
+  $('.color-toggler').click(function(){
+    var body = $('body');
+    if (body.hasClass ('blue')) {
+      body.removeClass('blue').addClass('red');
+    } else if (body.hasClass ('red')) {
+      body.removeClass('red').addClass('green');
+    } else if (body.hasClass ('green')) {
+      body.removeClass('green').addClass('purple');
+    } else if (body.hasClass ('purple')) {
+      body.removeClass('purple').addClass('orange');
+    } else if (body.hasClass ('orange')) {
+      body.removeClass('orange').addClass('blue');
+    }
+
+  });
+
+});
+    </script>
+
+
+
+
+
+
+  <script src="https://static.codepen.io/assets/editor/live/css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js"></script>
+</body>
+
+</html>
