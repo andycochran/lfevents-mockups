@@ -13,12 +13,12 @@ body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #023;
   color: White;
-  padding-top: 5rem;
+  padding-top: 3rem;
 }
 
 @media screen and (min-width: 64em) {
   body {
-    padding-top: 7rem;
+    padding-top: 9rem;
   }
 }
 a {
@@ -51,12 +51,6 @@ h1, p {
   background-color: #0a3b61;
   box-shadow: 0 0.5rem 0 0 rgba(0, 0, 0, 0.2);
 }
-.site-header .menu > li,
-.site-header .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .lf-site-header a {
   color: #fff;
@@ -73,10 +67,14 @@ h1, p {
 .event-site-header .button-group {
   margin: 0;
 }
+.event-site-header .button-group button,
 .event-site-header .button-group .button {
   font-weight: bold;
   font-size: 1rem;
   margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .event-site-header .dropdown-pane {
   border: 0;
@@ -168,16 +166,27 @@ body.orange .dropdown-pane {
 
   <header class="site-header">
 
-  <div class="hide-for-large" style="margin:1rem;">
-    <button class="menu-toggler button float-right" style="font-size:1rem;" data-toggle="lf-site-header-social event-site-header"><i class="fas fa-bars"></i></button>
-    <img class="hide-for-large" style="max-height:3rem;" src="https://events.linuxfoundation.org/wp-content/uploads/2018/12/OSSNA_Logo_800x161-01.png" />
+  <button class="menu-toggler button float-right hide-for-large" data-toggle="lf-site-header-social event-site-header"><i class="fas fa-bars"></i></button>
+
+  <div class="lf-site-header grid-x">
+    <ul class="menu cell large-auto">
+      <li>
+        <a href="#" class="lf-events-link">
+          <img src="https://events.linuxfoundation.org/wp-content/uploads/2017/11/logo_lfe_blue.png" class="lf-events-logo" />
+        </a>
+      </li>
+    </ul>
+    <ul class="menu cell large-shrink show-for-large" id="lf-site-header-social" data-toggler="show-for-large">
+      <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+      <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+    </ul>
   </div>
 
   <div class="event-site-header show-for-large" id="event-site-header" data-toggler="show-for-large">
     <div class="button-group expanded stacked-for-medium">
-      <a href="#" class="button" style="min-width:16rem;">
-        <img style="max-height:3rem;" src="https://events.linuxfoundation.org/wp-content/uploads/2018/12/OSSNA_Logo_800x161-01.png" />
-      </a>
+      <a class="button" href="#"><img style="max-height:4rem;" src="https://events.linuxfoundation.org/wp-content/uploads/2018/12/OSSNA_Logo_800x161-01.png" /></a>
       <a class="button" href="#" data-toggle="example-dropdown-1">
         Attend&nbsp;&nbsp;<i class="fas fa-caret-down"></i>
       </a>
